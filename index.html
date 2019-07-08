@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Standard Contract</title>
+		<style type="text/css">
+			html,body{padding:0;margin:0;width: 100%;height:100%;}
+			.bb,#bb{border:1px solid #fff}
+			.top-inside{
+				color:#fff;
+			}
+			.part-a{
+				background: #050821;
+				height:742px;
+			}
+			.top{
+				height: 70px;
+				border-bottom: 2px solid #1A2036;
+			}
+			.top-inside{
+				width:1200px;
+				/*border:0.1px solid red;*/
+				line-height: 68px;
+				margin:0 auto;
+			}
+			.top-left img{
+				vertical-align: middle;
+			}
+			.lang-div{
+				cursor: pointer;
+			}
+			.lang-select{
+				display: none;
+			}
+			.sc-simple{
+				height: 131px;
+			}
+			.sc-k{
+				height: 478px;
+			}
+			
+			.part-b{
+				background: #0D112C;
+				padding:40px 0;
+			}
+			.b-inside{
+				margin:0 auto;
+				width: 1200px;
+			}
+			.b-top,.b-down,.btop,.top-inside{
+				display:flex;
+				justify-content: space-between;
+				flex-wrap: wrap;
+			}
+			.btop{
+				width:285px;
+				height:120px;
+				border-radius: 10px;
+				color: #f5f5f5;
+			}
+			.btop .btop-box:nth-child(1){
+				margin-left:20px;
+			}
+			.btop .btop-box:nth-child(2){
+				margin-right:20px;
+			}
+			.btop-box{
+				/*border:0.1px solid red;*/
+			}
+			.btop-box p:nth-child(1){
+				font-size: 16px;
+			}
+			.btop-box p:nth-child(2){
+				font-size: 24px;
+				font-weight: bold;
+			}
+			.btop:nth-child(1){
+				background: -webkit-linear-gradient(left, #E5AC29 , #FB3129);
+			    background: -o-linear-gradient(right, #E5AC29, #FB3129); 
+			    background: -moz-linear-gradient(right, #E5AC29, #FB3129);
+			    background: linear-gradient(to right, #E5AC29 , #FB3129); 
+			}
+			.btop:nth-child(2){
+				background: -webkit-linear-gradient(left, #B4EC51 , #429321);
+			    background: -o-linear-gradient(right, #B4EC51, #429321); 
+			    background: -moz-linear-gradient(right, #B4EC51, #429321);
+			    background: linear-gradient(to right, #B4EC51 , #429321); 
+			}
+			.btop:nth-child(3){
+				background: -webkit-linear-gradient(left, #00C6FF , #002AFF);
+			    background: -o-linear-gradient(right, #00C6FF, #002AFF); 
+			    background: -moz-linear-gradient(right, #00C6FF, #002AFF);
+			    background: linear-gradient(to right, #00C6FF , #002AFF); 
+			}
+			.btop:nth-child(4){
+				background: -webkit-linear-gradient(left, #4776E6 , #6411E5);
+			    background: -o-linear-gradient(right, #4776E6, #6411E5); 
+			    background: -moz-linear-gradient(right, #4776E6, #6411E5);
+			    background: linear-gradient(to right, #4776E6 , #6411E5); 
+			}
+			.bdown{
+				width:590px;
+				height: 468px;
+				margin-top:20px;
+				background: #1A2036;
+			}
+			.bdown-title{
+				color: #0087FF;
+				height: 60px;
+				line-height: 60px;
+				text-indent: 20px;
+				font-size: 16px;
+				font-weight: bold;
+				border-bottom: 1px solid #050821;
+			}
+			.bdown ul{padding: 0;margin: 0;}
+			.bdown ul li{
+				border-bottom: 1px solid #050821;
+				padding:0 16px 0 20px;
+				height:50px;
+				line-height: 50px;
+				list-style: none;
+				display:flex;
+				justify-content: space-between;
+			}
+			.bdown ul .li-title{
+				font-size: 14px;
+				color:#828990;
+			}
+			.bdown ul .li-c{
+				font-size: 16px;
+				color:#fff;
+			}
+			.bdown ul .li-c img{
+				vertical-align: sub;
+			}
+			.up-rate{
+				color:#1FC42A;
+			}
+			.down-rate{
+				color:#F5342F;
+			}
+		</style>
+		<script src="echarts.min.js"></script>
+	</head>
+	<body>
+		<div class="part-a">
+			<div class="top">
+				<div class="top-inside">
+					<div class="top-left">
+						<img src="img/logo.png"/>
+					</div>
+					<div class="top-right">
+						<div class="lang-div">
+							<div>English <img src="img/language_icon_more_blc.png"/></div> 
+							<div class="lang-select">中文</div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+			<div class="sc-simple">
+				asdfasdf
+			</div>
+			<div class="sc-k">
+				asdfasdf
+			</div>
+		</div>
+		<div class="part-b">
+			<div class="b-inside">
+				<div class="b-top">
+					<div class="btop">
+						<div class="btop-box">
+							<p>Mainstream index</p>
+							<p>8930.456</p>
+						</div>
+						<div class="btop-box bb" style="padding:0 20px">
+							<p class="up-rate" align="center">+1.22%</p>
+							<div class="bb" id="main" style="width:80px;height: 40px;">...</div>
+						</div>
+					</div>
+					<div class="btop">
+						<div class="btop-box">
+							<p>Altcoin index</p>
+							<p>8930.456</p>
+						</div>
+						<div class="btop-box">
+							<p class="up-rate" align="center">+1.22%</p>
+							<p>...</p>
+						</div>
+					</div>
+					<div class="btop">
+						<div class="btop-box">
+							<p>Appcoin index</p>
+							<p>8930.456</p>
+						</div>
+						<div class="btop-box">
+							<p class="down-rate" align="center">-1.22%</p>
+							<p>...</p>
+						</div>
+					</div>
+					<div class="btop">
+						<div class="btop-box">
+							<p>Platformcoin index</p>
+							<p>8930.456</p>
+						</div>
+						<div class="btop-box">
+							<p class="down-rate" align="center">-1.22%</p>
+							<p>...</p>
+						</div>
+					</div>
+				</div>
+				<div class="b-down">
+					<div class="bdown">
+						<div class="bdown-title">
+							Mainstream coin
+						</div>
+						<ul>
+							<li class="li-title">
+								<span id="">Coin</span>
+								<span id="">Price</span>
+								<span id="">Rate</span>
+							</li>
+							<li class="li-c">
+								<span><img src="img/btc.png"/> &nbsp;BTC</span>
+								<span>12890.3418</span>
+								<span class="up-rate">12.56%</span>
+							</li>
+							<li class="li-c">
+								<span><img src="img/eth.png"/> &nbsp;ETH</span>
+								<span>189.052</span>
+								<span class="down-rate">12.56%</span>
+							</li>
+							<li class="li-c">
+								<span><img src="img/eos.png"/> &nbsp;EOS</span>
+								<span>289.12</span>
+								<span class="up-rate">4.04%</span>
+							</li>
+						</ul>
+					</div>
+					<div class="bdown">
+						<div class="bdown-title">
+							Altcoin
+						</div>
+						<ul>
+							<li class="li-title">
+								<span id="">Coin</span>
+								<span id="">Price</span>
+								<span id="">Rate</span>
+							</li>
+							<li class="li-c">
+								<span><img src="img/btc.png"/> &nbsp;ETH</span>
+								<span>2580.3043</span>
+								<span class="down-rate">1.56%</span>
+							</li>
+							<li class="li-c">
+								<span><img src="img/btc.png"/> &nbsp;DASH</span>
+								<span>890.38</span>
+								<span class="down-rate">2.7%</span>
+							</li>
+							<li class="li-c">
+								<span><img src="img/btc.png"/> &nbsp;LTC</span>
+								<span>120.3418</span>
+								<span class="up-rate">56.00%</span>
+							</li>
+							<li class="li-c">
+								<span><img src="img/btc.png"/> &nbsp;ETH</span>
+								<span>2580.3043</span>
+								<span class="down-rate">1.56%</span>
+							</li>
+							<li class="li-c">
+								<span><img src="img/btc.png"/> &nbsp;DASH</span>
+								<span>890.38</span>
+								<span class="down-rate">2.7%</span>
+							</li>
+							<li class="li-c">
+								<span><img src="img/btc.png"/> &nbsp;LTC</span>
+								<span>120.3418</span>
+								<span class="up-rate">56.00%</span>
+							</li>
+							<li class="li-c">
+								<span><img src="img/btc.png"/> &nbsp;ETH</span>
+								<span>2580.3043</span>
+								<span class="down-rate">1.56%</span>
+							</li>
+							<li class="li-c">
+								<span><img src="img/btc.png"/> &nbsp;DASH</span>
+								<span>890.38</span>
+								<span class="down-rate">2.7%</span>
+							</li>
+							<li class="li-c">
+								<span><img src="img/btc.png"/> &nbsp;LTC</span>
+								<span>120.3418</span>
+								<span class="up-rate">56.00%</span>
+							</li>
+						</ul>
+					</div>
+					<div class="bdown">
+						<div class="bdown-title">
+							APP coin
+						</div>
+						<ul>
+							<li class="li-title">
+								<span id="">Coin</span>
+								<span id="">Price</span>
+								<span id="">Rate</span>
+							</li>
+							<li class="li-c">
+								<span><img src="img/btc.png"/> &nbsp;BTC</span>
+								<span>12890.3418</span>
+								<span class="up-rate">12.56%</span>
+							</li>
+							<li class="li-c">
+								<span><img src="img/btc.png"/> &nbsp;BTC</span>
+								<span>12890.3418</span>
+								<span class="down-rate">12.56%</span>
+							</li>
+							<li class="li-c">
+								<span><img src="img/btc.png"/> &nbsp;BTC</span>
+								<span>12890.3418</span>
+								<span class="up-rate">12.56%</span>
+							</li>
+						</ul>
+					</div>
+					<div class="bdown">
+						<div class="bdown-title">
+							Platform coin
+						</div>
+						<ul>
+							<li class="li-title">
+								<span id="">Coin</span>
+								<span id="">Price</span>
+								<span id="">Rate</span>
+							</li>
+							<li class="li-c">
+								<span><img src="img/btc.png"/> &nbsp;BTC</span>
+								<span>12890.3418</span>
+								<span class="up-rate">12.56%</span>
+							</li>
+							<li class="li-c">
+								<span><img src="img/btc.png"/> &nbsp;BTC</span>
+								<span>12890.3418</span>
+								<span class="down-rate">12.56%</span>
+							</li>
+							<li class="li-c">
+								<span><img src="img/btc.png"/> &nbsp;BTC</span>
+								<span>12890.3418</span>
+								<span class="up-rate">12.56%</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
